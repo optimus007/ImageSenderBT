@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.starktech.vishal.imagesender.MainActivity">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:background="@color/md_red_800"
+        android:padding="5dp"
+        android:text="Packet Preview"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+    <ViewSwitcher
+        android:id="@+id/viewSwitcher"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1" >
+        <GridView
+            android:id="@+id/gridGallery"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:gravity="center"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+
+            android:paddingTop="4dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="2dp"
+            android:verticalSpacing="7dp"
+            tools:listitem="@layout/gallery_item" >
+        </GridView>
+
+        <ImageView
+            android:id="@+id/imgSinglePick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/no_media" />
+    </ViewSwitcher>
+
+    <LinearLayout
+        android:id="@+id/llBottomContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            style="@android:style/Widget.Material.Button"
+            android:backgroundTint="@color/md_blue_500"
+            android:elevation="10dp"
+            android:textStyle="normal|bold"
+            android:textSize="24sp"
+            android:textColor="@color/md_amber_50" />
+
+        <Button
+            android:id="@+id/btnGalleryPickMul"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="SELECT IMAGES"
+            style="@android:style/Widget.Material.Button"
+            android:backgroundTint="@color/md_deep_purple_400"
+            android:textStyle="normal|bold"
+            android:textSize="24sp"
+            android:textColor="@color/md_blue_50" />
+    </LinearLayout>
+
+
+</LinearLayout>

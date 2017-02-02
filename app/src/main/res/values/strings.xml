@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ImageSender</string>
+    <string name="path">/Pictures/OGQ/</string>
+</resources>
